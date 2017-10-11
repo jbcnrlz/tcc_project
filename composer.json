@@ -1,0 +1,92 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Project Template",
+    "keywords": ["yii2", "framework", "basic", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "kartik-v/yii2-widgets": "*",
+        "2amigos/yii2-arrayquery-component": "*",
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "macgyer/yii2-materializecss": "^1.1",
+        "kartik-v/yii2-grid": "@dev",
+        "sintret/yii2-gii-adminlte": "^1.0",
+        "huijiewei/yii2-bootboxjs": "^1.0",
+        "kartik-v/yii2-dialog": "@dev",
+        "branchonline/yii2-lightbox": "^1.2",
+        "kartik-v/yii2-detail-view": "*",
+        "kartik-v/yii2-datecontrol": "^1.9",
+        "uran1980/yii2-pace-widget": "dev-master",
+        "kartik-v/yii2-widget-growl": "*",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "yiibr/yii2-br-validator": "*",
+        "yiisoft/yii2-imagine": "^2.1",
+        "bupy7/yii2-widget-cropbox": "2.*",
+        "karpoff/yii2-crop-image-upload": "*",
+        "kartik-v/yii2-editable": "@dev",
+        "loveorigami/yii2-modal-ajax": "@dev",
+        "kartik-v/yii2-widget-switchinput": "*",
+        "dlds/yii2-summernote": "dev-master",
+        "2amigos/yii2-file-upload-widget": "~1.0",
+        "limion/yii2-jquery-fileupload-widget": "~1.0",
+        "kartik-v/yii2-mpdf": "dev-master",
+        "hscstudio/yii2-mailbox": "1.0",
+        "bigpaulie/yii2-fancybox": "dev-master",
+        "vova07/yii2-imperavi-widget": "*",
+        "integready/yii2-simplemath-captcha": "dev-master",
+        "kdn/yii2-json-editor": "*",
+        "kartik-v/yii2-field-range": "*"
+    
+ 
+       
+
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
